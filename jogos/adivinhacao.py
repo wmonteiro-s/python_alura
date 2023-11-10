@@ -14,10 +14,11 @@ menor = chute < numero_secreto
 
 if acertou:
     print("\nParabéns, você acertou!")
+elif maior:
+    print("\nQue pena, você errou. O seu chute foi MAIOR que o número secreto")
+elif menor:
+    print("\nQue pena, você errou. O seu chute foi MENOR que o número secreto")
 else:
-    if maior:
-        print("\nQue pena, você errou. O seu chute foi MAIOR que o número secreto")
-    elif menor:
-        print("\nQue pena, você errou. O seu chute foi MENOR que o número secreto")
+    print("Não é válido")
 
 print("Fim do jogo!")
