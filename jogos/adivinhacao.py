@@ -5,11 +5,11 @@ print("*"*33, "\n")
 numero_secreto = 42
 tentativas = 1
 
-while tentativas <= 3:
+for tentativas in range(tentativas, 4):
     print(f'Tentativa {tentativas} de 3')
     chute = int(input("Digite um número: "))
 
-    print("Você digitou", chute)
+    print(f'Você digitou {chute}')
 
     acertou = numero_secreto == chute
     maior = chute > numero_secreto
@@ -23,7 +23,5 @@ while tentativas <= 3:
         print("Que pena, você errou. O seu chute foi MENOR que o número secreto\n")
     else:
         print("Não é válido\n")
-
-    tentativas += 1
 
 print("Fim do jogo!")
