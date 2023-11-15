@@ -1,24 +1,29 @@
 print("*"*33)
 print("Bem vindo ao jogo de Adivinhação!")
-print("*"*33)
+print("*"*33, "\n")
 
 numero_secreto = 42
+tentativas = 1
 
-chute = int(input("Digite um número: "))
+while tentativas <= 3:
+    print(f'Tentativa {tentativas} de 3')
+    chute = int(input("Digite um número: "))
 
-print("\nVocê digitou", chute)
+    print("Você digitou", chute)
 
-acertou = numero_secreto == chute
-maior = chute > numero_secreto
-menor = chute < numero_secreto
+    acertou = numero_secreto == chute
+    maior = chute > numero_secreto
+    menor = chute < numero_secreto
 
-if acertou:
-    print("\nParabéns, você acertou!")
-elif maior:
-    print("\nQue pena, você errou. O seu chute foi MAIOR que o número secreto")
-elif menor:
-    print("\nQue pena, você errou. O seu chute foi MENOR que o número secreto")
-else:
-    print("Não é válido")
+    if acertou:
+        print("Parabéns, você acertou!\n")
+    elif maior:
+        print("Que pena, você errou. O seu chute foi MAIOR que o número secreto\n")
+    elif menor:
+        print("Que pena, você errou. O seu chute foi MENOR que o número secreto\n")
+    else:
+        print("Não é válido\n")
+
+    tentativas += 1
 
 print("Fim do jogo!")
