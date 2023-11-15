@@ -7,9 +7,11 @@ tentativas = 1
 
 for tentativas in range(tentativas, 4):
     print(f'Tentativa {tentativas} de 3')
-    chute = int(input("Digite um número: "))
-
+    chute = int(input("Digite um número entre 1 e 100: "))
     print(f'Você digitou {chute}')
+
+    if chute < 1 or chute > 100:
+        print("O número digitado deve estar entre 1 e 100\n")
 
     acertou = numero_secreto == chute
     maior = chute > numero_secreto
