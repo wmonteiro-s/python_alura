@@ -5,7 +5,7 @@ print("*"*33)
 print("Bem vindo ao jogo de Adivinhação!")
 print("*"*33, "\n")
 
-numero_secreto = round(random.random() * 100)
+numero_secreto = random.randrange(1,101)
 tentativas = 1
 max_tentativas = 5
 print(numero_secreto)
