@@ -1,12 +1,17 @@
+import random
+
+
 print("*"*33)
 print("Bem vindo ao jogo de Adivinhação!")
 print("*"*33, "\n")
 
-numero_secreto = 42
+numero_secreto = round(random.random() * 100)
 tentativas = 1
+max_tentativas = 5
+print(numero_secreto)
 
-for tentativas in range(tentativas, 4):
-    print(f'Tentativa {tentativas} de 3')
+for tentativas in range(tentativas, max_tentativas + 1):
+    print(f'Tentativa {tentativas} de {max_tentativas}')
     chute = int(input("Digite um número entre 1 e 100: "))
     print(f'Você digitou {chute}')
 
