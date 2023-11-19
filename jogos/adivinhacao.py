@@ -7,8 +7,31 @@ print("*"*33, "\n")
 
 numero_secreto = random.randrange(1,101)
 tentativas = 1
-max_tentativas = 5
+max_tentativas = 0
 print(numero_secreto)
+
+print("\nEscolha o nível de dificuldade")
+print("(1)Fácil | (2)Médio | (3)Difícil")
+
+while True:
+    nivel = int(input("\nSelecione um dos níveis indicados: "))
+
+    if nivel == 1:
+        print("<-Nível Fácil->\n")
+        max_tentativas = 20
+        break
+    elif nivel == 2:
+        print("<-Nível Médio->\n")
+        max_tentativas = 10
+        break
+    elif nivel == 3:
+        print("<-Nível Difícil->\n")
+        max_tentativas = 5
+        break
+    else:
+        print("***Este não é um nível selecionável***")
+        continue
+    
 
 for tentativas in range(tentativas, max_tentativas + 1):
     print(f'Tentativa {tentativas} de {max_tentativas}')
