@@ -1,6 +1,5 @@
 import random
 
-
 print("*"*33)
 print("Bem vindo ao jogo de Adivinhação!")
 print("*"*33, "\n")
@@ -8,10 +7,10 @@ print("*"*33, "\n")
 numero_secreto = random.randrange(1,101)
 tentativas = 1
 max_tentativas = 0
+pontos = 1000
 print(numero_secreto)
 
-print("\nEscolha o nível de dificuldade")
-print("(1)Fácil | (2)Médio | (3)Difícil")
+print("\nEscolha o nível de dificuldade\n(1)Fácil | (2)Médio | (3)Difícil")
 
 while True:
     nivel = int(input("\nSelecione um dos níveis indicados: "))
@@ -32,7 +31,6 @@ while True:
         print("***Este não é um nível selecionável***")
         continue
     
-
 for tentativas in range(tentativas, max_tentativas + 1):
     print(f'Tentativa {tentativas} de {max_tentativas}')
     chute = int(input("Digite um número entre 1 e 100: "))
@@ -47,7 +45,7 @@ for tentativas in range(tentativas, max_tentativas + 1):
     menor = chute < numero_secreto
 
     if acertou:
-        print("Parabéns, você acertou!\n")
+        print(f'Parabéns, você acertou e fez {pontos} pontos!\n')
         break
     elif maior:
         print("Que pena, você errou. O seu chute foi MAIOR que o número secreto\n")
@@ -55,5 +53,8 @@ for tentativas in range(tentativas, max_tentativas + 1):
         print("Que pena, você errou. O seu chute foi MENOR que o número secreto\n")
     else:
         print("Não é válido\n")
+
+    pontos_perdidos = abs(numero_secreto - chute)
+    pontos = pontos - pontos_perdidos
 
 print("Fim do jogo!")
