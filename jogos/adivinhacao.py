@@ -9,7 +9,6 @@ def jogar():
     tentativas = 1
     max_tentativas = 0
     pontos = 1000
-    print(numero_secreto)
 
     print("\nEscolha o nível de dificuldade\n(1)Fácil | (2)Médio | (3)Difícil")
 
@@ -62,3 +61,6 @@ def jogar():
         pontos = pontos - pontos_perdidos
 
     print("Fim do jogo!")
+
+if __name__ == "__main__":
+    jogar()
