@@ -10,10 +10,8 @@ def jogar():
     max_tentativas = 0
     pontos = 1000
 
-    print("\nEscolha o nível de dificuldade\n(1)Fácil | (2)Médio | (3)Difícil")
-
     while True:
-        nivel = int(input("\nSelecione um dos níveis indicados: "))
+        nivel = int(input("Selecione um dos níveis de dificuldade\n(1)Fácil | (2)Médio | (3)Difícil:"))
 
         if nivel == 1:
             print("<-Nível Fácil->\n")
@@ -28,7 +26,7 @@ def jogar():
             max_tentativas = 5
             break
         else:
-            print("***Este não é um nível selecionável***")
+            print("\nⓘ Este não é um nível selecionável\n")
         
     for tentativas in range(tentativas, max_tentativas + 1):
         print(f'Tentativa {tentativas} de {max_tentativas}')
