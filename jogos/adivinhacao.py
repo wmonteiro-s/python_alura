@@ -29,7 +29,6 @@ while True:
         break
     else:
         print("***Este não é um nível selecionável***")
-        continue
     
 for tentativas in range(tentativas, max_tentativas + 1):
     print(f'Tentativa {tentativas} de {max_tentativas}')
@@ -49,8 +48,12 @@ for tentativas in range(tentativas, max_tentativas + 1):
         break
     elif maior:
         print("Que pena, você errou. O seu chute foi MAIOR que o número secreto\n")
+        if tentativas == max_tentativas:
+            print(f'Você esgotou suas tentativas, o número secreto era {numero_secreto}')
     elif menor:
         print("Que pena, você errou. O seu chute foi MENOR que o número secreto\n")
+        if tentativas == max_tentativas:
+            print(f'Você esgotou suas tentativas, o número secreto era {numero_secreto}')      
     else:
         print("Não é válido\n")
 
