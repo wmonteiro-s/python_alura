@@ -1,11 +1,11 @@
-import random
+from random import randrange
 
 def jogar():
     print("*"*33)
     print("Bem vindo ao jogo de Adivinhação!")
     print("*"*33, "\n")
 
-    numero_secreto = random.randrange(1,101)
+    numero_secreto = randrange(1,101)
     tentativas = 1
     max_tentativas = 0
     pontos = 1000
